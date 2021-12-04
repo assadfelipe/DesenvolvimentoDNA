@@ -16,12 +16,12 @@ export class ClientesService {
     return this.http.get(environment.apiUrl3);
   }
 
-  cadastrarClientes(produto: ClienteModel): Observable<any> {
-    return this.http.post(environment.apiUrl3, produto);
+  cadastrarClientes(cliente: ClienteModel): Observable<any> {
+    return this.http.post(environment.apiUrl3, cliente);
   }
 
-  atualizarClientes(id: any, produto: ClienteModel): Observable<any> {
-    return this.http.put(environment.apiUrl3.concat(id), produto);
+  atualizarClientes(id: any, cliente: ClienteModel): Observable<any> {
+    return this.http.put(environment.apiUrl3.concat(id), cliente);
   }
 
   removerClientes(id: any) {

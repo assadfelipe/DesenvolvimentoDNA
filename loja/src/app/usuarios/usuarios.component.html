@@ -9,26 +9,28 @@
   <p><button type="button" (click)="cadastrar()">Cadastrar</button></p>
 </form>
 
-<h2> Usuários Cadastrados</h2>
+<h3>
+  Usuários Cadastrados
+</h3>
 
-<table>
-  <tr>
-    <th>ID</th>
-    <th>Nome</th>
-    <th>CPF</th>
-    <th>Login</th>
-    <th>Senha</th>
-    <th>Ações</th>
-  </tr>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Login</th>
+      <th>Senha</th>
+      <th>Ações</th>
+    </tr>
 
 
-  <tr *ngFor="let usuario of usuarios">
-    <td>{{usuario.id}}</td>
-    <td>{{usuario.nome}}</td>
-    <td>{{usuario.cpf}}</td>
-    <td>{{usuario.login}}</td>
-    <td>{{usuario.senha}}</td>
-    <td><button (click)="atualizar(usuario.id)">Atualizar</button><button (click)="remover(usuario.id)">Remover</button></td>
+    <tr *ngFor="let usuario of usuarios">
+      <td>{{usuario.id}}</td>
+      <td>{{usuario.nome}}</td>
+      <td>{{usuario.cpf}}</td>
+      <td>{{usuario.login}}</td>
+      <td>{{usuario.senha}}</td>
+      <td><button (click)="atualizar(usuario.id)">Atualizar</button><button (click)="remover(usuario.id)">Remover</button></td>
 
-  </tr>
-</table>
+    </tr>
+  </table>
