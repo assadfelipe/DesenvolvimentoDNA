@@ -21,7 +21,7 @@ export class ProdutosComponent implements OnInit {
   listarProdutos() {
     this.ProdutosService.listarProdutos().subscribe(produtos => {
       this.produtos = produtos;
-    }, err => { console.log('Erro ao listar usuarios', err) });
+    }, err => { console.log('Erro ao listar Produtos', err) });
   }
 
   cadastrar() {
@@ -43,7 +43,7 @@ export class ProdutosComponent implements OnInit {
     this.ProdutosService.removerProdutos(id).subscribe(produto => {
       this.produto = new ProdutoModel();
       this.listarProdutos();
-    }, err => { console.log('Erro ao atualizar Produto.', err) });
+    }, err => { console.log('Erro ao remover Produto.', err) });
   }
 
 }

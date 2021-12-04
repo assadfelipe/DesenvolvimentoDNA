@@ -33,5 +33,12 @@
       "preco": 5,
       "id": 3
     }
+  ],
+  "clientes": [
+    {
+      "cnpj": "123574/0001",
+      "razao": "Recanto Novo",
+      "id": 1
+    }
   ]
 }
