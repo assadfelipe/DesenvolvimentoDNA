@@ -11,6 +11,8 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { ProdutosService } from './produtos.service';
 import { ClientesComponent } from './clientes/clientes.component';
 import { ClientesService } from './clientes.service';
+import { CriarPedidoComponent } from './criar-pedido/criar-pedido.component';
+import { CriarPedidoService } from './criar-pedido.service';
 
 @NgModule({
   declarations: [
@@ -18,14 +20,15 @@ import { ClientesService } from './clientes.service';
     UsuariosComponent,
     ProdutosComponent,
     ClientesComponent,
-    ClientesComponent
+    ClientesComponent,
+    CriarPedidoComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule
   ],
-  providers: [HttpClientModule, UsuariosService, ProdutosService, ClientesService],
+  providers: [HttpClientModule, UsuariosService, ProdutosService, ClientesService, CriarPedidoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

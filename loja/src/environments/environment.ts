@@ -6,7 +6,8 @@ export const environment = {
   production: false,
   apiUrl1: 'Http://localhost:3000/usuarios/',
   apiUrl2: 'Http://localhost:3000/produtos/',
-  apiUrl3: 'Http://localhost:3000/clientes/'
+  apiUrl3: 'Http://localhost:3000/clientes/',
+  apiUrl4: 'Http://localhost:3000/pedidos/'
 };
 
 /*

@@ -1,0 +1,39 @@
+
+<h2> Criar Pedido </h2>
+<hr>
+<form>
+  <p>Cliente: <input type="text" name="cliente" [(ngModel)]="pedido.cliente" /></p>
+  <p>Produto:  <input type="text" name="produto" [(ngModel)]="pedido.produto" /></p>
+  <p>Quantidade:  <input type="text" name="qtdade" [(ngModel)]="pedido.qtdade" /></p>
+  <p>Total:  <input type="text" name="total" [(ngModel)]="pedido.total" /></p>
+  <p>Usuário:  <input type="text" name="usuario" [(ngModel)]="pedido.usuario" /></p>
+
+  <p><button type="button" (click)="cadastrar()">Cadastrar</button></p>
+</form>
+
+<h3> Pedidos Criados</h3>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Cliente</th>
+    <th>Produto</th>
+    <th>Quantidade</th>
+    <th>Total</th>
+    <th>Usuário</th>
+    <th>Ações</th>
+  </tr>
+
+
+  <tr *ngFor="let pedido of pedidos">
+    <td>{{pedido.id}}</td>
+    <td>{{pedido.cliente}}</td>
+    <td>{{pedido.produto}}</td>
+    <td>{{pedido.qtdade}}
+    <td>{{pedido.total}}</td>
+    <td>{{pedido.usuario}}</td>
+    <td>{{pedido.produto}}</td>
+    <td><button (click)="atualizar(pedido.id)">Atualizar</button><button (click)="remover(pedido.id)">Remover</button></td>
+
+  </tr>
+</table>
