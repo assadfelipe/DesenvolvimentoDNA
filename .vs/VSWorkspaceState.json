@@ -5,8 +5,8 @@
     "\\loja\\src",
     "\\loja\\src\\app",
     "\\loja\\src\\app\\produtos",
-    "\\loja\\src\\app\\usuarios",
     "\\loja\\src\\environments"
   ],
+  "SelectedNode": "\\loja\\src\\app\\produtos\\produto.model.ts",
   "PreviewInSolutionExplorer": false
 }
