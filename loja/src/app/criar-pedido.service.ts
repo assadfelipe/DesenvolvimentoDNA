@@ -29,4 +29,9 @@ export class CriarPedidoService {
   removerPedidos(id: any) {
     return this.http.delete(environment.apiUrl4.concat(id));
   }
+
+  listarClientes(): Observable<any> {
+
+    return this.http.get(environment.apiUrl3);
+  }
 }

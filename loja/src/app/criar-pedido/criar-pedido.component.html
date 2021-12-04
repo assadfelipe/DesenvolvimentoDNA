@@ -25,6 +25,10 @@
   </tr>
 
 
+  <select [(ngModel)]="cliente.razao">
+    <option *ngFor="let cliente of clientes">{{cliente.razao}}</option>
+  </select>
+
   <tr *ngFor="let pedido of pedidos">
     <td>{{pedido.id}}</td>
     <td>{{pedido.cliente}}</td>
