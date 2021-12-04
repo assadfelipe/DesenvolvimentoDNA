@@ -1,0 +1,37 @@
+{
+  "usuarios": [
+    {
+      "nome": "Andre",
+      "cpf": 47895487744,
+      "login": "andre2021",
+      "senha": "SenhaAndre",
+      "id": 1
+    },
+    {
+      "nome": "Ana Carolina",
+      "cpf": 78988845211,
+      "login": "ana2021",
+      "senha": "SenhaAna",
+      "id": 2
+    },
+    {
+      "nome": "Igor",
+      "cpf": "16041993782",
+      "login": "LoginIgor",
+      "senha": "SenhaIgor",
+      "id": 4
+    }
+  ],
+  "produtos": [
+    {
+      "nome": "Teclado",
+      "preco": 12.5,
+      "id": 2
+    },
+    {
+      "nome": "Mouse",
+      "preco": 5,
+      "id": 3
+    }
+  ]
+}
