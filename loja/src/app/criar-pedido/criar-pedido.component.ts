@@ -34,6 +34,10 @@ export class CriarPedidoComponent implements OnInit {
     this.listarUsuarios();
   }
 
+  onOptionsSelected(event: any) {
+    alert("the selected value is ");
+  }
+
   listarPedidos() {
     this.CriarPedidoService.listarPedidos().subscribe(pedidos => {
       this.pedidos = pedidos;
@@ -47,7 +51,7 @@ export class CriarPedidoComponent implements OnInit {
   }
 
   cadastrar() {
-    alert("cliente2: " + this.pedido.cliente + ", " + this.pedido.qtdade);
+    alert("cliente2: " + this.pedido.cliente.razao + ", " + this.pedido.qtdade);
 
     this.pedido.total = this.pedido.qtdade * this.pedido.produto.preco;
     this.CriarPedidoService.cadastrarPedidos(this.pedido).subscribe(pedido => {

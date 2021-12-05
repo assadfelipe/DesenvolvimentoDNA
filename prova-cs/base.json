@@ -43,12 +43,41 @@
   ],
   "pedidos": [
     {
-      "qtdade": "10",
+      "cliente": {
+        "cnpj": "",
+        "razao": ""
+      },
+      "produto": {
+        "nome": "",
+        "preco": 0
+      },
+      "qtdade": 0,
+      "total": 0,
+      "usuario": {
+        "nome": "",
+        "cpf": "",
+        "login": "",
+        "senha": ""
+      },
       "id": 1
     },
     {
-      "qtdade": "500",
-      "total": 100,
+      "cliente": {
+        "cnpj": "",
+        "razao": ""
+      },
+      "produto": {
+        "nome": "",
+        "preco": 0
+      },
+      "qtdade": "20",
+      "total": 0,
+      "usuario": {
+        "nome": "",
+        "cpf": "",
+        "login": "",
+        "senha": ""
+      },
       "id": 2
     },
     {
@@ -60,14 +89,14 @@
         "nome": "",
         "preco": 0
       },
-      "qtdade": "1",
+      "qtdade": 0,
+      "total": 0,
       "usuario": {
         "nome": "",
         "cpf": "",
         "login": "",
         "senha": ""
       },
-      "total": 0,
       "id": 3
     }
   ]

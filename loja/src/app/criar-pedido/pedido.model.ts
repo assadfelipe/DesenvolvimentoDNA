@@ -6,6 +6,6 @@ export class PedidoModel {
   cliente: ClienteModel = new ClienteModel();
   produto: ProdutoModel = new ProdutoModel();
   qtdade: number = 0;
-  total: number | undefined;
+  total: number = 0;
   usuario: UsuarioModel = new UsuarioModel();
 }

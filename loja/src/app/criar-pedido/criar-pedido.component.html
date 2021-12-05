@@ -4,26 +4,28 @@
 <form>
   <p>
     Cliente:
-    <select [(ngModel)]="pedido.cliente">
-      <option *ngFor="let cliente of clientes" [ngValue]="cliente.cnpj">{{cliente.razao}}</option>
+    <select [(ngModel)]="pedido.cliente.razao" (ngModelChange)='onOptionsSelected($event)'>
+      <option *ngFor="let cliente of clientes" [ngValue]="cliente.razao">{{cliente.razao + " - " + cliente.cnpj}}</option>
     </select>
   </p>
 
-  <p>Produto:
-    <select [(ngModel)]="pedido.produto">
-      <option *ngFor="let produto of produtos">{{produto.nome}}</option>
-    </select>
-  </p>
+    <p>
+      Produto:
+      <select [(ngModel)]="pedido.produto" (ngModelChange)='onOptionsSelected($event)'>
+        <option *ngFor="let produto of produtos">{{produto.nome}}</option>
+      </select>
+    </p>
 
-  <p>Quantidade:  <input type="text" name="qtdades" [(ngModel)]="pedido.qtdade" /></p>
+    <p>Quantidade:  <input type="text" name="qtdades" [(ngModel)]="pedido.qtdade" /></p>
 
-  <p>Usuário:
-    <select [(ngModel)]="pedido.usuario">
-      <option *ngFor="let usuario of usuarios">{{usuario.nome}}</option>
-    </select>
-  </p>
+    <p>
+      Usuário:
+      <select [(ngModel)]="pedido.usuario">
+        <option *ngFor="let usuario of usuarios">{{usuario.nome}}</option>
+      </select>
+    </p>
 
-  <p><button type="button" (click)="cadastrar()">Cadastrar</button></p>
+    <p><button type="button" (click)="cadastrar()">Cadastrar</button></p>
 </form>
 
 <button (click)="checar($event)"> Checar!</button>
@@ -43,12 +45,11 @@
 
   <tr *ngFor="let pedido of pedidos">
     <td>{{pedido.id}}</td>
-    <td>{{pedido.cliente}}</td>
-    <td>{{pedido.produto}}</td>
+    <td>{{pedido.cliente.razao}}</td>
+    <td>{{pedido.produto.nome}}</td>
     <td>{{pedido.qtdade}}
     <td>{{pedido.total}}</td>
-    <td>{{pedido.usuario}}</td>
-    <td>{{pedido.produto}}</td>
+    <td>{{pedido.usuario.nome}}</td>
     <td><button (click)="atualizar(pedido.id)">Atualizar</button><button (click)="remover(pedido.id)">Remover</button></td>
 
   </tr>
