@@ -2,14 +2,31 @@
 <h2> Criar Pedido </h2>
 <hr>
 <form>
-  <p>Cliente: <input type="text" name="cliente" [(ngModel)]="pedido.cliente" /></p>
-  <p>Produto:  <input type="text" name="produto" [(ngModel)]="pedido.produto" /></p>
-  <p>Quantidade:  <input type="text" name="qtdade" [(ngModel)]="pedido.qtdade" /></p>
-  <p>Total:  <input type="text" name="total" [(ngModel)]="pedido.total" /></p>
-  <p>Usuário:  <input type="text" name="usuario" [(ngModel)]="pedido.usuario" /></p>
+  <p>
+    Cliente:
+    <select [(ngModel)]="pedido.cliente">
+      <option *ngFor="let cliente of clientes" [ngValue]="cliente.cnpj">{{cliente.razao}}</option>
+    </select>
+  </p>
+
+  <p>Produto:
+    <select [(ngModel)]="pedido.produto">
+      <option *ngFor="let produto of produtos">{{produto.nome}}</option>
+    </select>
+  </p>
+
+  <p>Quantidade:  <input type="text" name="qtdades" [(ngModel)]="pedido.qtdade" /></p>
+
+  <p>Usuário:
+    <select [(ngModel)]="pedido.usuario">
+      <option *ngFor="let usuario of usuarios">{{usuario.nome}}</option>
+    </select>
+  </p>
 
   <p><button type="button" (click)="cadastrar()">Cadastrar</button></p>
 </form>
+
+<button (click)="checar($event)"> Checar!</button>
 
 <h3> Pedidos Criados</h3>
 
@@ -23,11 +40,6 @@
     <th>Usuário</th>
     <th>Ações</th>
   </tr>
-
-
-  <select [(ngModel)]="cliente.razao">
-    <option *ngFor="let cliente of clientes">{{cliente.razao}}</option>
-  </select>
 
   <tr *ngFor="let pedido of pedidos">
     <td>{{pedido.id}}</td>

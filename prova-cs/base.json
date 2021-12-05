@@ -42,5 +42,33 @@
     }
   ],
   "pedidos": [
+    {
+      "qtdade": "10",
+      "id": 1
+    },
+    {
+      "qtdade": "500",
+      "total": 100,
+      "id": 2
+    },
+    {
+      "cliente": {
+        "cnpj": "",
+        "razao": ""
+      },
+      "produto": {
+        "nome": "",
+        "preco": 0
+      },
+      "qtdade": "1",
+      "usuario": {
+        "nome": "",
+        "cpf": "",
+        "login": "",
+        "senha": ""
+      },
+      "total": 0,
+      "id": 3
+    }
   ]
 }

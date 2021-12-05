@@ -1,4 +1,4 @@
 export class ProdutoModel {
   nome: string = "";
-  preco: string = "";
+  preco: number = 0;
 }

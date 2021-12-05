@@ -3,9 +3,9 @@ import { ProdutoModel } from "../produtos/produto.model";
 import { UsuarioModel } from "../usuarios/usuario.model";
 
 export class PedidoModel {
-  cliente: ClienteModel | undefined;
-  produto: ProdutoModel | undefined;
-  qtdade: number | undefined;
+  cliente: ClienteModel = new ClienteModel();
+  produto: ProdutoModel = new ProdutoModel();
+  qtdade: number = 0;
   total: number | undefined;
-  usuario: UsuarioModel | undefined;
+  usuario: UsuarioModel = new UsuarioModel();
 }

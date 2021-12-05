@@ -34,4 +34,15 @@ export class CriarPedidoService {
 
     return this.http.get(environment.apiUrl3);
   }
+
+  listarProdutos(): Observable<any> {
+
+    return this.http.get(environment.apiUrl2);
+  }
+
+  listarUsuarios(): Observable<any> {
+
+    return this.http.get(environment.apiUrl1);
+  }
+
 }
