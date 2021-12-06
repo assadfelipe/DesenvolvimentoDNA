@@ -13,6 +13,7 @@ import { PedidoModel } from './pedido.model';
 })
 export class CriarPedidoComponent implements OnInit {
 
+  umPedido: PedidoModel = new PedidoModel();
   pedido: PedidoModel = new PedidoModel();
   pedidos: Array<any> = new Array();
 
@@ -34,9 +35,6 @@ export class CriarPedidoComponent implements OnInit {
     this.listarUsuarios();
   }
 
-  onOptionsSelected(event: any) {
-    alert("the selected value is ");
-  }
 
   listarPedidos() {
     this.CriarPedidoService.listarPedidos().subscribe(pedidos => {
@@ -44,18 +42,11 @@ export class CriarPedidoComponent implements OnInit {
     }, err => { console.log('Erro ao listar Pedidos', err) });
   }
 
-  checar(event: any) {
-    //this.pedido.cliente = this.cliente.razao;
-    //console.log(this.pedido.cliente);
-    alert("cliente2: " + this.cliente.razao);
-  }
-
   cadastrar() {
-    alert("cliente2: " + this.pedido.cliente.razao + ", " + this.pedido.qtdade);
+    this.umPedido.total = this.umPedido.qtdade * this.umPedido.preco;
 
-    this.pedido.total = this.pedido.qtdade * this.pedido.produto.preco;
-    this.CriarPedidoService.cadastrarPedidos(this.pedido).subscribe(pedido => {
-      this.pedido = new PedidoModel();
+    this.CriarPedidoService.cadastrarPedidos(this.umPedido).subscribe(umPedido => {
+      this.umPedido = new PedidoModel();
       this.listarPedidos();
     }, err => { console.log('Erro ao cadastrar Cliente.', err) });
   }

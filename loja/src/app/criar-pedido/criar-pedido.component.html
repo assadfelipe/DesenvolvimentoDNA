@@ -4,31 +4,29 @@
 <form>
   <p>
     Cliente:
-    <select [(ngModel)]="pedido.cliente.razao" (ngModelChange)='onOptionsSelected($event)'>
-      <option *ngFor="let cliente of clientes" [ngValue]="cliente.razao">{{cliente.razao + " - " + cliente.cnpj}}</option>
+    <select [(ngModel)]="umPedido.cliente">
+      <option *ngFor="let cliente of clientes" [ngValue]="cliente.razao">{{cliente.razao}}</option>
+    </select>
+  </p>
+  <p>
+    Produto:
+    <select [(ngModel)]="umPedido.produto">
+      <option *ngFor="let produto of produtos" [ngValue]="produto.nome">{{produto.nome}}</option>
     </select>
   </p>
 
-    <p>
-      Produto:
-      <select [(ngModel)]="pedido.produto" (ngModelChange)='onOptionsSelected($event)'>
-        <option *ngFor="let produto of produtos">{{produto.nome}}</option>
-      </select>
-    </p>
+  <p>Quantidade:  <input type="text" name="qtdades" [(ngModel)]="umPedido.qtdade" /></p>
 
-    <p>Quantidade:  <input type="text" name="qtdades" [(ngModel)]="pedido.qtdade" /></p>
+  <p>
+    Usuário:
+    <select [(ngModel)]="umPedido.usuario">
+      <option *ngFor="let usuario of usuarios" [ngValue]="usuario.nome">{{usuario.nome}}</option>
+    </select>
+  </p>
 
-    <p>
-      Usuário:
-      <select [(ngModel)]="pedido.usuario">
-        <option *ngFor="let usuario of usuarios">{{usuario.nome}}</option>
-      </select>
-    </p>
-
-    <p><button type="button" (click)="cadastrar()">Cadastrar</button></p>
+  <p><button type="button" (click)="cadastrar()">Cadastrar</button></p>
 </form>
 
-<button (click)="checar($event)"> Checar!</button>
 
 <h3> Pedidos Criados</h3>
 

@@ -4,8 +4,11 @@
     "\\loja",
     "\\loja\\src",
     "\\loja\\src\\app",
+    "\\loja\\src\\app\\clientes",
+    "\\loja\\src\\app\\criar-pedido",
     "\\loja\\src\\app\\produtos",
-    "\\loja\\src\\environments"
+    "\\loja\\src\\environments",
+    "\\prova-cs"
   ],
   "SelectedNode": "\\loja\\src\\app\\produtos\\produto.model.ts",
   "PreviewInSolutionExplorer": false

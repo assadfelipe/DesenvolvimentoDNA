@@ -39,65 +39,58 @@
       "cnpj": "123574/0001",
       "razao": "Recanto Novo",
       "id": 1
+    },
+    {
+      "cnpj": "44578451/0001",
+      "razao": "Teste",
+      "id": 2
     }
   ],
   "pedidos": [
     {
-      "cliente": {
-        "cnpj": "",
-        "razao": ""
-      },
-      "produto": {
-        "nome": "",
-        "preco": 0
-      },
+      "cliente": "",
+      "produto": "",
       "qtdade": 0,
+      "preco": 0,
       "total": 0,
-      "usuario": {
-        "nome": "",
-        "cpf": "",
-        "login": "",
-        "senha": ""
-      },
-      "id": 1
+      "usuario": "",
+      "id": 19
     },
     {
-      "cliente": {
-        "cnpj": "",
-        "razao": ""
-      },
-      "produto": {
-        "nome": "",
-        "preco": 0
-      },
-      "qtdade": "20",
+      "cliente": "",
+      "produto": "",
+      "qtdade": 0,
+      "preco": 0,
       "total": 0,
-      "usuario": {
-        "nome": "",
-        "cpf": "",
-        "login": "",
-        "senha": ""
-      },
-      "id": 2
+      "usuario": "",
+      "id": 20
     },
     {
-      "cliente": {
-        "cnpj": "",
-        "razao": ""
-      },
-      "produto": {
-        "nome": "",
-        "preco": 0
-      },
+      "cliente": "",
+      "produto": "",
       "qtdade": 0,
+      "preco": 0,
       "total": 0,
-      "usuario": {
-        "nome": "",
-        "cpf": "",
-        "login": "",
-        "senha": ""
-      },
-      "id": 3
+      "usuario": "",
+      "id": 21
+    },
+    {
+      "cliente": "",
+      "produto": "",
+      "qtdade": 0,
+      "preco": 0,
+      "total": 0,
+      "usuario": "",
+      "id": 22
+    },
+    {
+      "cliente": "",
+      "produto": "",
+      "qtdade": 0,
+      "preco": 0,
+      "total": 0,
+      "usuario": "",
+      "id": 23
     }
   ]
 }
